@@ -18,7 +18,7 @@ let computerScore = 0;
 //bot beats human
 
 
-function playRound(humanChoice, computerChoice){
+/*function playRound(humanChoice, computerChoice){
     const human = humanChoice.toLowerCase();
     const computer =computerChoice.toLowerCase();
     if (human === computer){
@@ -48,7 +48,44 @@ function playRound(humanChoice, computerChoice){
             computerScore++;
         }
     }
-}
+}**/
+
+function playRound(humanChoice, computerChoice){
+    const human = humanChoice.toLowerCase();
+    const computer =computerChoice.toLowerCase();
+
+    switch(human){
+        case ("rock"):
+            if(computer==="scissors"){
+                humanScore++;
+            }
+            else{
+                computerScore++;
+            }
+        break;
+        
+        case("paper"):
+            if(computer==="rock"){
+                humanScore++;
+            }
+            else{
+                computerScore++;
+            }
+        break;
+        
+        case("scissors"):
+            if(computer==="paper"){
+                humanScore++;
+            }
+            else{
+                computerScore++;
+            }
+        break;
+
+        default:
+            console.log("wrong input");
+        }
+    }
 
 function getComputerChoice(){
     let max = Math.floor(Math.random() * 3);

@@ -1,54 +1,19 @@
 let humanScore = 0;
 let computerScore = 0;
 
-
-
 //0 is rock, 1 is paper, 2 is scissors
 
-//paper beats rock 1 > 0
-//scissors beat paper 2 > 1
-//rock beats scissors 0 < 2
+//paper beats rock 
+//scissors beat paper 
+//rock beats scissors
 
-//there are 6 possible outcomes.
+//there are 9 possible outcomes.
 //human beats bot  paper > rock
 //human beats bot  scissors > paper
 //human beats bot  rock > scissors
 //bot beats human  
 //bot beats human
 //bot beats human
-
-
-/*function playRound(humanChoice, computerChoice){
-    const human = humanChoice.toLowerCase();
-    const computer =computerChoice.toLowerCase();
-    if (human === computer){
-        console.log("draw");
-    }
-    else if(human === "rock"){
-        if(computer==="scissors"){
-            humanScore++;
-        }
-        else{
-            computerScore++;
-        }
-    }
-    else if(human === "paper"){
-        if(computer==="rock"){
-            humanScore++;
-        }
-        else{
-            computerScore++;
-        }
-    }
-    else{
-        if(computer==="paper"){
-            humanScore++;
-        }
-        else{
-            computerScore++;
-        }
-    }
-}**/
 
 function playRound(humanChoice, computerChoice){
     const human = humanChoice.toLowerCase();

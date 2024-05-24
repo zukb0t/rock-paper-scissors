@@ -1,27 +1,13 @@
 let humanScore = 0;
 let computerScore = 0;
 
-//0 is rock, 1 is paper, 2 is scissors
-
-//paper beats rock 
-//scissors beat paper 
-//rock beats scissors
-
-//there are 9 possible outcomes.
-//human beats bot  paper > rock
-//human beats bot  scissors > paper
-//human beats bot  rock > scissors
-//bot beats human  
-//bot beats human
-//bot beats human
-
 function playRound(humanChoice, computerChoice){
     const human = humanChoice.toLowerCase();
     const computer =computerChoice.toLowerCase();
 
     switch(human){
         case ("rock"):
-            computer==="scissors" ? humanScore++ : computerSCore++;
+            computer==="scissors" ? humanScore++ : computerScore++;
         break;
         
         case("paper"):
@@ -31,7 +17,7 @@ function playRound(humanChoice, computerChoice){
         case("scissors"):
             computer==="paper" ? humanScore++ : computerScore++;
         break;
-        
+
         default:
             console.log("wrong input");
         }
@@ -45,31 +31,25 @@ function getComputerChoice(){
 };
 
 
-    //if(max === 0){
-        //return "Rock";
-    //}
-    //else if(max === 1){
-        //return "Paper";
-    //}
-    //else{
-        //return "Scissors";
-    //}
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
+
+rock.addEventListener("click", function(event){
+    console.log(getComputerChoice());
+});
+paper.addEventListener("click", function(event){
+    const a = event.target.value = 1;
+    getHumanChoice();
+})
+scissors.addEventListener("click", function(event){
+    const a = event.target.value = 1;
+    getHumanChoice();
+})
 
 function getHumanChoice(){
-    return prompt("Select Rock, Paper, or Scissors.");
+    let x = rock.value === "1" ? "Rock"
+    : paper === "1" ? "Paper"
+    : "Scissors";
+    console.log(x);
 };
-
-
-//for(let i = 0; i < 6; i++){
-    //playRound(getHumanChoice(), getComputerChoice());
-//}
-//if(humanScore === computerScore){
-   // console.log("game ended in a draw");
-//}
-//else if (humanScore > computerScore){
-    //console.log("congrats!, you won");
-//}
-//else{
-    //console.log("you lose!");
-//}
-

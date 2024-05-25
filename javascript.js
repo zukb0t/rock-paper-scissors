@@ -4,6 +4,8 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice){
     const human = humanChoice.toLowerCase();
     const computer =computerChoice.toLowerCase();
+    console.log(human);
+    console.log(computerChoice);
 
     switch(human){
         case ("rock"):
@@ -21,6 +23,8 @@ function playRound(humanChoice, computerChoice){
         default:
             console.log("wrong input");
         }
+    console.log(humanScore);
+    console.log(computerScore);
     }
 
 function getComputerChoice(){
@@ -30,26 +34,17 @@ function getComputerChoice(){
     : "Scissors";
 };
 
-
 const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
 
-rock.addEventListener("click", function(event){
-    console.log(getComputerChoice());
+rock.addEventListener("click", function(){
+    playRound("Rock", getComputerChoice());
 });
-paper.addEventListener("click", function(event){
-    const a = event.target.value = 1;
-    getHumanChoice();
+paper.addEventListener("click", function(){
+    playRound("Paper", getComputerChoice());
 })
-scissors.addEventListener("click", function(event){
-    const a = event.target.value = 1;
-    getHumanChoice();
+scissors.addEventListener("click", function(){
+    playRound("Scissors", getComputerChoice());
 })
 
-function getHumanChoice(){
-    let x = rock.value === "1" ? "Rock"
-    : paper === "1" ? "Paper"
-    : "Scissors";
-    console.log(x);
-};

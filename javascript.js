@@ -52,7 +52,7 @@ function displayScore(human, computer){
     else if(computerScore===5){
         alert("you lost...");
     } 
-}
+} 
 
 const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
